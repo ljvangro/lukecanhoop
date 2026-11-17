@@ -1,0 +1,3 @@
+# local helper scripts stay off the public site
+*.py
+__pycache__/

@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LUKECANHOOP | Your Favorite NBA Casual</title>
+<meta name="description" content="LUKECANHOOP: NBA hot takes, rankings and comedy. 820K+ followers across TikTok and YouTube and 270M+ YouTube views.">
+<meta property="og:title" content="LUKECANHOOP | Your Favorite NBA Casual">
+<meta property="og:description" content="NBA hot takes, rankings and comedy. 820K+ followers across TikTok and YouTube.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8F%80%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0e0e10; --bg2: #151518; --card: #1b1b1f; --line: rgba(255,255,255,.08);
+    --text: #f4f4f5; --muted: #a1a1aa; --soft: #d4d4d8;
+    /* the only bright colors: the buttons we want people to click */
+    --hoop: #F58426; --third: #4CC26B;
+    /* super light tints for stats only */
+    --hoop-lt: #FFD8B5; --third-lt: #C6F0D2;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: Inter, system-ui, sans-serif; line-height: 1.5; overflow-x: hidden; }
+  a { color: inherit; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+  .display { font-family: Anton, Impact, sans-serif; letter-spacing: .5px; text-transform: uppercase; line-height: 1; }
+
+  /* nav */
+  nav { position: sticky; top: 0; z-index: 10; background: rgba(14,14,16,.85); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .logo { font-family: Anton, sans-serif; font-size: 24px; text-decoration: none; }
+  .logo b { color: var(--muted); font-weight: 400; }
+  nav ul { display: flex; gap: 22px; list-style: none; padding: 0; }
+  nav ul a { text-decoration: none; color: var(--muted); font-weight: 600; font-size: 15px; }
+  nav ul a:hover { color: var(--text); }
+  @media (max-width: 640px) { nav ul { display: none; } }
+
+  /* hero */
+  .hero { position: relative; overflow: hidden; background:
+      radial-gradient(ellipse at 50% 45%, rgba(255,255,255,.07), transparent 60%),
+      repeating-linear-gradient(90deg, rgba(255,255,255,.025) 0 2px, transparent 2px 64px),
+      linear-gradient(#1c1c20, #0e0e10); border-bottom: 1px solid var(--line); }
+  .court { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .14; pointer-events: none; }
+  .hero .wrap { position: relative; text-align: center; padding: 110px 16px 90px; }
+  .hero h1 { font-size: clamp(56px, 12vw, 150px); text-shadow: 0 6px 0 rgba(0,0,0,.45); }
+  .hero h1 b { color: transparent; -webkit-text-stroke: 3px var(--text); font-weight: 400; text-shadow: none; }
+  .tag { display: inline-block; border: 2px solid var(--soft); color: var(--text); font-weight: 800; letter-spacing: 3px; font-size: clamp(13px, 2.2vw, 18px); padding: 8px 16px; margin: 18px 0 12px; text-transform: uppercase; }
+  .sub { color: var(--muted); font-weight: 600; letter-spacing: 2px; font-size: 14px; text-transform: uppercase; }
+  .ctas { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0 56px; }
+  .hero .ctas { justify-content: center; margin-bottom: 0; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 22px; border-radius: 999px; font-weight: 800; text-decoration: none; font-size: 15px; transition: transform .15s, filter .15s; }
+  .btn:hover { transform: translateY(-2px); filter: brightness(1.08); }
+  .btn.primary { background: var(--hoop); color: #1a0d04; }
+  .btn.green { background: var(--third); color: #06200f; }
+  @media (max-width: 760px) {
+    .hero .wrap { padding: 64px 16px 56px; }
+    .sub { letter-spacing: 1px; font-size: 12px; }
+  }
+
+  /* stat strip */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); background: var(--bg2); border-bottom: 1px solid var(--line); }
+  .stat { padding: 26px 12px; text-align: center; border-right: 1px solid var(--line); }
+  .stat:last-child { border-right: 0; }
+  .stat .n { font-family: Anton, sans-serif; font-size: clamp(30px, 5vw, 46px); color: var(--hoop-lt); }
+  .stat .l { color: var(--muted); font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+  @media (max-width: 640px) { .stats { grid-template-columns: repeat(2, 1fr); } .stat:nth-child(2) { border-right: 0; } .stat:nth-child(-n+2) { border-bottom: 1px solid var(--line); } }
+
+  section { padding: 72px 0; }
+  h2 { font-size: clamp(36px, 6vw, 56px); margin-bottom: 8px; }
+  .lead { color: var(--muted); max-width: 620px; margin-bottom: 32px; }
+
+  /* channels */
+  .grid3 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  @media (max-width: 860px) { .grid3 { grid-template-columns: 1fr; } }
+  .ch { background: var(--card); border-radius: 18px; padding: 26px; border: 1px solid var(--line); display: flex; flex-direction: column; gap: 14px; }
+  .ch h3 { font-family: Anton, sans-serif; font-weight: 400; font-size: 30px; color: var(--text); }
+  .ch p { color: var(--muted); }
+  .ch .nums { display: flex; gap: 22px; }
+  .ch .nums div { font-size: 13px; color: var(--muted); }
+  .ch .nums strong { display: block; color: var(--lt, var(--text)); font-size: 22px; font-weight: 800; }
+  .ch .links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
+  .chip { padding: 8px 14px; border-radius: 999px; border: 1px solid rgba(255,255,255,.22); text-decoration: none; font-weight: 600; font-size: 14px; color: var(--soft); }
+  .chip[href*="youtube"] { background: var(--hoop); border-color: var(--hoop); color: #1a0d04; font-weight: 800; }
+  .chip[href*="tiktok"] { background: var(--third); border-color: var(--third); color: #06200f; font-weight: 800; }
+  .chip { transition: transform .15s, filter .15s; }
+  .chip:hover { transform: translateY(-2px); filter: brightness(1.08); }
+
+  /* live stats */
+  .livepill { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,.06); color: var(--soft); font-weight: 800; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 14px; border-radius: 999px; margin-bottom: 14px; }
+  .livepill i { width: 9px; height: 9px; border-radius: 50%; background: #ef4444; box-shadow: 0 0 0 0 rgba(239,68,68,.7); animation: pulse 1.8s infinite; }
+  @keyframes pulse { 70% { box-shadow: 0 0 0 10px rgba(239,68,68,0); } 100% { box-shadow: 0 0 0 0 rgba(239,68,68,0); } }
+  .grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  @media (max-width: 960px) { .grid4 { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .grid4 { grid-template-columns: 1fr; } }
+  .tile { background: var(--card); border-radius: 18px; padding: 20px; border: 1px solid var(--line); transition: border-color .15s; }
+  .tile:hover { border-color: rgba(255,255,255,.25); }
+  .tile .hd { display: flex; justify-content: space-between; align-items: center; font-weight: 800; font-size: 14px; }
+  .tile .badge { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); background: rgba(255,255,255,.07); padding: 3px 9px; border-radius: 99px; }
+  .tile .big { font-family: Anton, sans-serif; font-size: 44px; margin-top: 10px; line-height: 1.1; font-variant-numeric: tabular-nums; color: var(--lt, var(--text)); }
+  .tile .lbl { color: var(--muted); font-size: 13px; }
+  .tile .gain { color: var(--lt, var(--soft)); font-weight: 800; font-size: 14px; margin-top: 6px; opacity: .85; }
+  .tile .spark { color: var(--lt, var(--soft)); }
+  .tile svg { width: 100%; height: 56px; margin-top: 12px; display: block; }
+  .tile .sec { color: var(--muted); font-size: 13px; margin-top: 8px; }
+  .tile .sec b { color: var(--text); }
+
+  /* work with me */
+  .work { background: linear-gradient(135deg, #1a1a1e, #0e0e10); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .work .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+  @media (max-width: 860px) { .work .wrap { grid-template-columns: 1fr; } }
+  .offer { list-style: none; padding: 0; display: grid; gap: 12px; }
+  .offer li { background: rgba(255,255,255,.04); border-left: 3px solid var(--soft); padding: 14px 18px; border-radius: 0 12px 12px 0; }
+  .offer strong { display: block; }
+  .offer span { color: var(--muted); font-size: 14px; }
+  .aud { background: var(--card); border-radius: 18px; padding: 26px; border: 1px solid var(--line); }
+  .aud h3 { font-family: Anton, sans-serif; font-weight: 400; font-size: 26px; margin-bottom: 14px; }
+  .bar { margin: 12px 0; }
+  .bar .row { display: flex; justify-content: space-between; font-size: 14px; font-weight: 600; }
+  .bar .track { height: 10px; background: rgba(255,255,255,.08); border-radius: 99px; margin-top: 6px; overflow: hidden; }
+  .bar .fill { height: 100%; border-radius: 99px; background: var(--lt, var(--soft)); }
+
+  footer { padding: 36px 0 48px; color: var(--muted); font-size: 14px; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top">LUKE<b>CAN</b>HOOP</a>
+    <ul>
+      <li><a href="#channels">Channels</a></li>
+      <li><a href="#live">Live stats</a></li>
+      <li><a href="#work">Work with me</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <svg class="court" viewBox="0 0 1600 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g fill="none" stroke="#ffffff" stroke-width="3">
+      <line x1="800" y1="0" x2="800" y2="700"/><circle cx="800" cy="350" r="120"/>
+      <rect x="0" y="210" width="260" height="280"/><circle cx="260" cy="350" r="110"/><path d="M0 40 A 520 520 0 0 1 0 660"/>
+      <rect x="1340" y="210" width="260" height="280"/><circle cx="1340" cy="350" r="110"/><path d="M1600 40 A 520 520 0 0 0 1600 660"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <div>
+      <h1 class="display">Luke<b>Can</b>Hoop</h1>
+      <div class="tag">Your favorite NBA casual</div>
+      <div class="sub">Hot takes &nbsp;•&nbsp; Rankings &nbsp;•&nbsp; Comedy</div>
+      <div class="ctas">
+        <a class="btn primary" href="https://www.youtube.com/@LUKECANHOOP" target="_blank" rel="noopener">▶ Watch on YouTube</a>
+        <a class="btn green" href="https://www.tiktok.com/@lukecanhoop" target="_blank" rel="noopener">Follow on TikTok</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="stat"><div class="n" id="s-all">820K+</div><div class="l">Followers, all pages</div></div>
+  <div class="stat"><div class="n" id="s-ytv">270M+</div><div class="l">YouTube views</div></div>
+  <div class="stat"><div class="n" id="s-tt">568K</div><div class="l">TikTok followers</div></div>
+  <div class="stat"><div class="n" id="s-yt">199K</div><div class="l">YouTube subscribers</div></div>
+</div>
+
+<section id="channels">
+  <div class="wrap">
+    <h2 class="display">The channels</h2>
+    <p class="lead">Two pages, one guy. Basketball takes and football takes.</p>
+    <div class="grid3">
+      <article class="ch" style="--lt: var(--hoop-lt)">
+        <h3>LUKECANHOOP</h3>
+        <p>NBA rankings, hot takes and "did I miss any?" countdowns. The main page.</p>
+        <div class="nums"><div><strong>568K</strong>TikTok</div><div><strong>199K</strong>YouTube</div><div><strong>265M</strong>YT views</div></div>
+        <div class="links"><a class="chip" href="https://www.tiktok.com/@lukecanhoop" target="_blank" rel="noopener">TikTok</a><a class="chip" href="https://www.youtube.com/@LUKECANHOOP" target="_blank" rel="noopener">YouTube</a></div>
+      </article>
+      <article class="ch" style="--lt: var(--third-lt)">
+        <h3>3RDANDLUKE</h3>
+        <p>Football takes and countdowns, same energy, different ball.</p>
+        <div class="nums"><div><strong>42.4K</strong>TikTok</div><div><strong>15K</strong>YouTube</div><div><strong>7.4M</strong>YT views</div></div>
+        <div class="links"><a class="chip" href="https://www.tiktok.com/@3rdandluke" target="_blank" rel="noopener">TikTok</a><a class="chip" href="https://www.youtube.com/@3rdandLuke" target="_blank" rel="noopener">YouTube</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="live" style="padding-top:0">
+  <div class="wrap">
+    <div class="livepill"><i></i><span id="updated">Live stats</span></div>
+    <h2 class="display">Live stats</h2>
+    <p class="lead">Pulled from the channel tracker every day.</p>
+    <div class="grid4" id="tiles"></div>
+  </div>
+</section>
+
+<section class="work" id="work">
+  <div class="wrap">
+    <div>
+      <h2 class="display">Work with me</h2>
+      <p class="lead">Basketball fans who actually watch to the end and argue in the comments. Let's put your brand in front of them.</p>
+      <ul class="offer">
+        <li><strong>Sponsored Top 5</strong><span>Your product built into a countdown on LUKECANHOOP.</span></li>
+        <li><strong>Talking-head take</strong><span>A 9:16 face-to-camera video with your brand in the take.</span></li>
+        <li><strong>Cross-post package</strong><span>TikTok + YouTube Shorts together, plus a pinned comment.</span></li>
+      </ul>
+      <div class="ctas" style="margin-bottom:0">
+        <a class="btn primary" id="contact" href="#work" data-u="ljvangro" data-d="gmail.com">✉ Get in touch</a>
+      </div>
+    </div>
+    <aside class="aud">
+      <h3>Reach by page</h3>
+      <div id="reach"></div>
+      <p style="color:var(--muted);font-size:13px;margin-top:16px"><span id="likes">56.4M TikTok likes on LUKECANHOOP.</span></p>
+    </aside>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 LUKECANHOOP</span>
+    <span><a href="https://www.tiktok.com/@lukecanhoop" target="_blank" rel="noopener">TikTok</a> · <a href="https://www.youtube.com/@LUKECANHOOP" target="_blank" rel="noopener">YouTube</a> · <a href="https://www.youtube.com/@3rdandLuke" target="_blank" rel="noopener">3RDANDLUKE</a></span>
+  </div>
+</footer>
+
+<script>
+  // the address is assembled here, not written in the HTML, so simple spam scrapers cannot read it
+  (() => { const c = document.getElementById("contact"); c.href = "mailto:" + c.dataset.u + "@" + c.dataset.d + "?subject=LUKECANHOOP%20partnership"; })();
+</script>
+<script>
+(async () => {
+  const fmt = (n) => n >= 1e6 ? (n / 1e6).toFixed(n >= 1e8 ? 0 : 1).replace(/\.0$/, "") + "M" : n >= 1e3 ? (n / 1e3).toFixed(n >= 1e5 ? 0 : 1).replace(/\.0$/, "") + "K" : String(n);
+  const color = { LUKECANHOOP: "var(--hoop-lt)", "3RDANDLUKE": "var(--third-lt)" };
+  const link = { "LUKECANHOOP tiktok": "https://www.tiktok.com/@lukecanhoop", "LUKECANHOOP youtube": "https://www.youtube.com/@LUKECANHOOP", "3RDANDLUKE tiktok": "https://www.tiktok.com/@3rdandluke", "3RDANDLUKE youtube": "https://www.youtube.com/@3rdandLuke" };
+  let d;
+  try { d = await (await fetch("stats.json", { cache: "no-store" })).json(); } catch (e) { return; } // keeps the numbers already in the page
+  const P = d.pages, get = (a, p) => P.find((x) => x.account === a && x.platform === p);
+  const sum = P.reduce((t, x) => t + x.followers, 0);
+  const ytv = P.filter((x) => x.platform === "youtube").reduce((t, x) => t + x.total, 0);
+  const set = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+  set("s-all", fmt(Math.floor(sum / 5e3) * 5e3) + "+"); set("s-ytv", fmt(Math.floor(ytv / 1e6) * 1e6) + "+");
+  set("s-tt", fmt(get("LUKECANHOOP", "tiktok").followers)); set("s-yt", fmt(get("LUKECANHOOP", "youtube").followers));
+  set("likes", fmt(get("LUKECANHOOP", "tiktok").total) + " TikTok likes on LUKECANHOOP. Updated " + new Date(d.updated + "T12:00").toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" }) + ".");
+  set("updated", "Live · updated " + new Date(d.updated + "T12:00").toLocaleDateString(undefined, { month: "short", day: "numeric" }));
+  const spark = (pts) => {
+    const v = pts.map((p) => p[1]), lo = Math.min(...v), hi = Math.max(...v), r = hi - lo || 1;
+    const xy = v.map((y, i) => [(i / Math.max(1, v.length - 1)) * 300, 52 - ((y - lo) / r) * 46]);
+    const line = xy.map((p, i) => (i ? "L" : "M") + p[0].toFixed(1) + " " + p[1].toFixed(1)).join(" ");
+    return `<svg viewBox="0 0 300 56" preserveAspectRatio="none"><path d="${line} L300 56 L0 56 Z" fill="currentColor" opacity=".12"/><path d="${line}" fill="none" stroke="currentColor" stroke-width="2.5" vector-effect="non-scaling-stroke"/></svg>`;
+  };
+  document.getElementById("tiles").innerHTML = P.map((x) => {
+    const yt = x.platform === "youtube";
+    return `<a class="tile" style="--lt:${color[x.account]};color:inherit;text-decoration:none" href="${link[x.account + " " + x.platform]}" target="_blank" rel="noopener">
+      <div class="hd"><span>${x.account}</span><span class="badge">${yt ? "YouTube" : "TikTok"}</span></div>
+      <div class="big" data-n="${x.followers}">0</div><div class="lbl">${yt ? "subscribers" : "followers"}</div>
+      <div class="gain">${x.gain30 >= 0 ? "▲ +" : "▼ "}${fmt(Math.abs(x.gain30))} in ${x.days} days</div>
+      <div class="spark">${spark(x.spark)}</div>
+      <div class="sec"><b>${fmt(x.total)}</b> ${yt ? "total views" : "total likes"}${x.posts ? ` · <b>${x.posts}</b> videos` : ""}</div></a>`;
+  }).join("");
+  const max = Math.max(...P.map((x) => x.followers));
+  document.getElementById("reach").innerHTML = P.map((x) => `<div class="bar" style="--lt:${color[x.account]}"><div class="row"><span>${x.account} ${x.platform === "youtube" ? "YouTube" : "TikTok"}</span><span>${fmt(x.followers)}</span></div><div class="track"><div class="fill" style="width:${Math.max(1, (x.followers / max) * 100)}%"></div></div></div>`).join("");
+  // count-up when the tiles scroll into view
+  const io = new IntersectionObserver((es) => es.forEach((e) => {
+    if (!e.isIntersecting) return; io.unobserve(e.target);
+    const el = e.target, n = +el.dataset.n, t0 = performance.now();
+    const step = (t) => { const k = Math.min(1, (t - t0) / 1200), v = Math.round(n * (1 - Math.pow(1 - k, 3))); el.textContent = v.toLocaleString(); if (k < 1) requestAnimationFrame(step); };
+    requestAnimationFrame(step);
+  }), { threshold: 0.4 });
+  document.querySelectorAll(".big[data-n]").forEach((el) => io.observe(el));
+})();
+</script>
+</body>
+</html>
