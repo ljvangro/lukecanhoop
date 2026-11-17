@@ -30,7 +30,10 @@
   .display { font-family: Anton, Impact, sans-serif; letter-spacing: .5px; text-transform: uppercase; line-height: 1; }
 
   /* nav */
-  nav { position: sticky; top: 0; z-index: 10; background: rgba(14,14,16,.85); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  nav { position: sticky; top: 0; z-index: 10; background: rgba(74,36,12,.94); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(245,132,38,.3); }
+  nav ul a { color: #f3d9c2 !important; }
+  nav ul a:hover { color: #fff !important; }
+  nav .logo b { color: #f3c9a2; }
   nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
   .logo { font-family: Anton, sans-serif; font-size: 24px; text-decoration: none; }
   .logo b { color: var(--muted); font-weight: 400; }
@@ -41,15 +44,15 @@
 
   /* hero */
   .hero { position: relative; overflow: hidden; background:
-      radial-gradient(ellipse at 50% 45%, rgba(255,255,255,.07), transparent 60%),
-      repeating-linear-gradient(90deg, rgba(255,255,255,.025) 0 2px, transparent 2px 64px),
-      linear-gradient(#1c1c20, #0e0e10); border-bottom: 1px solid var(--line); }
-  .court { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .14; pointer-events: none; }
+      radial-gradient(ellipse at 50% 42%, rgba(245,132,38,.38), transparent 62%),
+      repeating-linear-gradient(90deg, rgba(0,0,0,.22) 0 2px, transparent 2px 64px),
+      linear-gradient(#6a3412, #2a140a); border-bottom: 1px solid rgba(245,132,38,.25); }
+  .court { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .3; pointer-events: none; }
   .hero .wrap { position: relative; text-align: center; padding: 110px 16px 90px; }
   .hero h1 { font-size: clamp(56px, 12vw, 150px); text-shadow: 0 6px 0 rgba(0,0,0,.45); }
   .hero h1 b { color: transparent; -webkit-text-stroke: 3px var(--text); font-weight: 400; text-shadow: none; }
   .tag { display: inline-block; border: 2px solid var(--soft); color: var(--text); font-weight: 800; letter-spacing: 3px; font-size: clamp(13px, 2.2vw, 18px); padding: 8px 16px; margin: 18px 0 12px; text-transform: uppercase; }
-  .sub { color: var(--muted); font-weight: 600; letter-spacing: 2px; font-size: 14px; text-transform: uppercase; }
+  .sub { color: #f3d9c2; font-weight: 600; letter-spacing: 2px; font-size: 14px; text-transform: uppercase; }
   .ctas { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0 56px; }
   .hero .ctas { justify-content: center; margin-bottom: 0; }
   .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 22px; border-radius: 999px; font-weight: 800; text-decoration: none; font-size: 15px; transition: transform .15s, filter .15s; }
@@ -177,7 +180,7 @@
 
 <header class="hero" id="top">
   <svg class="court" viewBox="0 0 1600 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-    <g fill="none" stroke="#ffffff" stroke-width="3">
+    <g fill="none" stroke="#f3c9a2" stroke-width="3">
       <line x1="800" y1="0" x2="800" y2="700"/><circle cx="800" cy="350" r="120"/>
       <rect x="0" y="210" width="260" height="280"/><circle cx="260" cy="350" r="110"/><path d="M0 40 A 520 520 0 0 1 0 660"/>
       <rect x="1340" y="210" width="260" height="280"/><circle cx="1340" cy="350" r="110"/><path d="M1600 40 A 520 520 0 0 0 1600 660"/>
