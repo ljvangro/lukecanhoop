@@ -58,6 +58,12 @@
   .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 22px; border-radius: 999px; font-weight: 800; text-decoration: none; font-size: 15px; transition: transform .15s, filter .15s; }
   .btn:hover { transform: translateY(-2px); filter: brightness(1.08); }
   .btn.primary { background: var(--hoop); color: #1a0d04; }
+  /* brand-styled platform buttons: YouTube red, TikTok black */
+  .btn.yt, .chip.yt { background: #FF0000; border-color: #FF0000; color: #fff; }
+  .btn.tt, .chip.tt { background: #000; border-color: #000; color: #fff; box-shadow: -2px -2px 0 #25F4EE, 2px 2px 0 #FE2C55; }
+  .ico { height: 1.15em; width: auto; flex: none; }
+  .chip { display: inline-flex; align-items: center; gap: 7px; }
+
   .btn.green { background: var(--third); color: #06200f; }
   @media (max-width: 760px) {
     .hero .wrap { padding: 64px 16px 56px; }
@@ -87,8 +93,7 @@
   .ch .nums strong { display: block; color: var(--lt, var(--text)); font-size: 22px; font-weight: 800; }
   .ch .links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
   .chip { padding: 8px 14px; border-radius: 999px; border: 1px solid rgba(255,255,255,.22); text-decoration: none; font-weight: 600; font-size: 14px; color: var(--soft); }
-  .chip[href*="youtube"] { background: var(--hoop); border-color: var(--hoop); color: #1a0d04; font-weight: 800; }
-  .chip[href*="tiktok"] { background: var(--third); border-color: var(--third); color: #06200f; font-weight: 800; }
+  .chip.yt, .chip.tt { font-weight: 800; }
   .chip { transition: transform .15s, filter .15s; }
   .chip:hover { transform: translateY(-2px); filter: brightness(1.08); }
 
@@ -192,8 +197,8 @@
       <div class="tag">Your favorite NBA casual</div>
       <div class="sub">Hot takes &nbsp;•&nbsp; Rankings &nbsp;•&nbsp; Comedy</div>
       <div class="ctas">
-        <a class="btn primary" href="https://www.youtube.com/@LUKECANHOOP" target="_blank" rel="noopener">▶ Watch on YouTube</a>
-        <a class="btn green" href="https://www.tiktok.com/@lukecanhoop" target="_blank" rel="noopener">Follow on TikTok</a>
+        <a class="btn yt" href="https://www.youtube.com/@LUKECANHOOP" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="5" fill="#fff"/><path d="M11 5.5v9l8-4.5z" fill="#FF0000"/></svg>Watch on YouTube</a>
+        <a class="btn tt" href="https://www.tiktok.com/@lukecanhoop" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.5 3c.4 2.2 1.8 3.6 4 3.9v3a7.3 7.3 0 0 1-4-1.3v6.2a5.8 5.8 0 1 1-5.8-5.8c.3 0 .6 0 .9.1v3.1a2.8 2.8 0 1 0 1.9 2.6V3z" fill="#25F4EE" transform="translate(-1 -1)"/><path d="M16.5 3c.4 2.2 1.8 3.6 4 3.9v3a7.3 7.3 0 0 1-4-1.3v6.2a5.8 5.8 0 1 1-5.8-5.8c.3 0 .6 0 .9.1v3.1a2.8 2.8 0 1 0 1.9 2.6V3z" fill="#FE2C55" transform="translate(1 1)"/><path d="M16.5 3c.4 2.2 1.8 3.6 4 3.9v3a7.3 7.3 0 0 1-4-1.3v6.2a5.8 5.8 0 1 1-5.8-5.8c.3 0 .6 0 .9.1v3.1a2.8 2.8 0 1 0 1.9 2.6V3z" fill="#fff"/></svg>Follow on TikTok</a>
       </div>
     </div>
   </div>
@@ -215,13 +220,13 @@
         <h3>LUKECANHOOP</h3>
         <p>NBA rankings, hot takes and "did I miss any?" countdowns. The main page.</p>
         <div class="nums"><div><strong>568K</strong>TikTok</div><div><strong>199K</strong>YouTube</div><div><strong>265M</strong>YT views</div></div>
-        <div class="links"><a class="chip" href="https://www.tiktok.com/@lukecanhoop" target="_blank" rel="noopener">TikTok</a><a class="chip" href="https://www.youtube.com/@LUKECANHOOP" target="_blank" rel="noopener">YouTube</a></div>
+        <div class="links"><a class="chip tt" href="https://www.tiktok.com/@lukecanhoop" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.5 3c.4 2.2 1.8 3.6 4 3.9v3a7.3 7.3 0 0 1-4-1.3v6.2a5.8 5.8 0 1 1-5.8-5.8c.3 0 .6 0 .9.1v3.1a2.8 2.8 0 1 0 1.9 2.6V3z" fill="#25F4EE" transform="translate(-1 -1)"/><path d="M16.5 3c.4 2.2 1.8 3.6 4 3.9v3a7.3 7.3 0 0 1-4-1.3v6.2a5.8 5.8 0 1 1-5.8-5.8c.3 0 .6 0 .9.1v3.1a2.8 2.8 0 1 0 1.9 2.6V3z" fill="#FE2C55" transform="translate(1 1)"/><path d="M16.5 3c.4 2.2 1.8 3.6 4 3.9v3a7.3 7.3 0 0 1-4-1.3v6.2a5.8 5.8 0 1 1-5.8-5.8c.3 0 .6 0 .9.1v3.1a2.8 2.8 0 1 0 1.9 2.6V3z" fill="#fff"/></svg>TikTok</a><a class="chip yt" href="https://www.youtube.com/@LUKECANHOOP" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="5" fill="#fff"/><path d="M11 5.5v9l8-4.5z" fill="#FF0000"/></svg>YouTube</a></div>
       </article>
       <article class="ch" style="--lt: var(--third-lt)">
         <h3>3RDANDLUKE</h3>
         <p>Football takes and countdowns, same energy, different ball.</p>
         <div class="nums"><div><strong>42.4K</strong>TikTok</div><div><strong>15K</strong>YouTube</div><div><strong>7.4M</strong>YT views</div></div>
-        <div class="links"><a class="chip" href="https://www.tiktok.com/@3rdandluke" target="_blank" rel="noopener">TikTok</a><a class="chip" href="https://www.youtube.com/@3rdandLuke" target="_blank" rel="noopener">YouTube</a></div>
+        <div class="links"><a class="chip tt" href="https://www.tiktok.com/@3rdandluke" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.5 3c.4 2.2 1.8 3.6 4 3.9v3a7.3 7.3 0 0 1-4-1.3v6.2a5.8 5.8 0 1 1-5.8-5.8c.3 0 .6 0 .9.1v3.1a2.8 2.8 0 1 0 1.9 2.6V3z" fill="#25F4EE" transform="translate(-1 -1)"/><path d="M16.5 3c.4 2.2 1.8 3.6 4 3.9v3a7.3 7.3 0 0 1-4-1.3v6.2a5.8 5.8 0 1 1-5.8-5.8c.3 0 .6 0 .9.1v3.1a2.8 2.8 0 1 0 1.9 2.6V3z" fill="#FE2C55" transform="translate(1 1)"/><path d="M16.5 3c.4 2.2 1.8 3.6 4 3.9v3a7.3 7.3 0 0 1-4-1.3v6.2a5.8 5.8 0 1 1-5.8-5.8c.3 0 .6 0 .9.1v3.1a2.8 2.8 0 1 0 1.9 2.6V3z" fill="#fff"/></svg>TikTok</a><a class="chip yt" href="https://www.youtube.com/@3rdandLuke" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="5" fill="#fff"/><path d="M11 5.5v9l8-4.5z" fill="#FF0000"/></svg>YouTube</a></div>
       </article>
     </div>
   </div>
