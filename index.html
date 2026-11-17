@@ -123,6 +123,41 @@
   .bar .track { height: 10px; background: rgba(255,255,255,.08); border-radius: 99px; margin-top: 6px; overflow: hidden; }
   .bar .fill { height: 100%; border-radius: 99px; background: var(--lt, var(--soft)); }
 
+  /* wall sponsorship */
+  .wallgrid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 40px; align-items: start; }
+  @media (max-width: 860px) { .wallgrid { grid-template-columns: 1fr; } }
+  .mock { position: relative; aspect-ratio: 9 / 13; max-width: 360px; border-radius: 22px; overflow: hidden; border: 1px solid var(--line);
+    background: repeating-linear-gradient(90deg, rgba(255,255,255,.03) 0 2px, transparent 2px 46px), linear-gradient(#2a2a2f, #18181b); }
+  .mock .slot { position: absolute; left: 12%; right: 12%; top: 9%; height: 26%; border: 3px dashed rgba(255,255,255,.45); border-radius: 12px;
+    display: grid; place-items: center; text-align: center; font-family: Anton, sans-serif; font-size: 26px; letter-spacing: 1px; color: var(--soft); }
+  .mock .slot small { display: block; font-family: Inter, sans-serif; font-size: 12px; color: var(--muted); letter-spacing: 0; }
+  .mock .head { position: absolute; left: 50%; bottom: -8%; width: 62%; aspect-ratio: 1; transform: translateX(-50%); border-radius: 50% 50% 0 0; background: #3a3a40; }
+  .mock .head::before { content: ""; position: absolute; left: 22%; top: -38%; width: 56%; aspect-ratio: 1; border-radius: 50%; background: #4a4a52; }
+  .mock .cap { position: absolute; left: 8%; right: 8%; bottom: 30%; background: #fff; color: #111; font-weight: 800; font-size: 13px; text-align: center; padding: 6px; border-radius: 6px; }
+  .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 18px 0 26px; }
+  .facts div { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px; }
+  .facts b { display: block; font-family: Anton, sans-serif; font-size: 28px; color: var(--hoop-lt); font-weight: 400; }
+  .facts span { color: var(--muted); font-size: 13px; }
+  @media (max-width: 520px) { .facts { grid-template-columns: 1fr; } }
+  form.apply { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 24px; display: grid; gap: 14px; }
+  form.apply h3 { font-family: Anton, sans-serif; font-weight: 400; font-size: 26px; }
+  .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 520px) { .row2 { grid-template-columns: 1fr; } }
+  form.apply label { display: grid; gap: 6px; font-size: 13px; font-weight: 600; color: var(--soft); }
+  form.apply input, form.apply select, form.apply textarea { font: inherit; font-size: 15px; color: var(--text); background: #111114; border: 1px solid rgba(255,255,255,.14); border-radius: 10px; padding: 11px 12px; width: 100%; }
+  form.apply input:focus, form.apply select:focus, form.apply textarea:focus { outline: 2px solid rgba(255,255,255,.35); border-color: transparent; }
+  form.apply textarea { min-height: 90px; resize: vertical; }
+  .pkgs { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  @media (max-width: 520px) { .pkgs { grid-template-columns: 1fr; } }
+  .pkg { position: relative; display: block; cursor: pointer; }
+  .pkg input { position: absolute; opacity: 0; }
+  .pkg div { border: 1px solid rgba(255,255,255,.14); border-radius: 12px; padding: 12px 14px; font-weight: 400; color: var(--muted); }
+  .pkg div strong { display: block; color: var(--text); font-size: 15px; }
+  .pkg input:checked + div { border-color: var(--text); background: rgba(255,255,255,.05); }
+  .formnote { color: var(--muted); font-size: 12px; }
+  .sent { display: none; color: var(--soft); font-size: 14px; }
+  button.btn { border: 0; cursor: pointer; font-family: inherit; justify-self: start; }
+
   footer { padding: 36px 0 48px; color: var(--muted); font-size: 14px; }
   footer .wrap { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; }
 </style>
@@ -135,6 +170,7 @@
     <ul>
       <li><a href="#channels">Channels</a></li>
       <li><a href="#live">Live stats</a></li>
+      <li><a href="#wall">Wall ads</a></li>
       <li><a href="#work">Work with me</a></li>
     </ul>
   </div>
@@ -195,6 +231,52 @@
     <h2 class="display">Live stats</h2>
     <p class="lead">Pulled from the channel tracker every day.</p>
     <div class="grid4" id="tiles"></div>
+  </div>
+</section>
+
+<section id="wall">
+  <div class="wrap">
+    <h2 class="display">Your brand on my wall</h2>
+    <p class="lead">The wall behind me shows up in every talking-head video, on TikTok and YouTube. One brand at a time.</p>
+    <div class="wallgrid">
+      <div>
+        <div class="mock" aria-hidden="true">
+          <div class="slot"><div>YOUR LOGO HERE<small>behind me in every take</small></div></div>
+          <div class="head"></div>
+          <div class="cap">Did I miss any? 👀</div>
+        </div>
+        <div class="facts">
+          <div><b>10+</b><span>talking-head videos a month</span></div>
+          <div><b>~1M</b><span>monthly wall impressions</span></div>
+          <div><b>2</b><span>platforms: TikTok + YouTube</span></div>
+        </div>
+        <p class="formnote">Impressions are an estimate from typical views per talking-head video. One sponsor per month, so the wall is never shared. Placements are disclosed as paid partnerships.</p>
+      </div>
+      <form class="apply" id="applyForm" novalidate>
+        <h3>Apply for the wall</h3>
+        <div class="pkgs">
+          <label class="pkg"><input type="radio" name="package" value="Wall placement" checked><div><strong>Wall placement</strong>Your logo on the wall in every talking-head video for the month.</div></label>
+          <label class="pkg"><input type="radio" name="package" value="Wall + shout-out"><div><strong>Wall + shout-out</strong>The wall, plus a quick spoken mention of your brand in each video.</div></label>
+        </div>
+        <div class="row2">
+          <label>Brand / company<input name="brand" required autocomplete="organization"></label>
+          <label>Website<input name="website" placeholder="https://" autocomplete="url"></label>
+        </div>
+        <div class="row2">
+          <label>Your name<input name="name" required autocomplete="name"></label>
+          <label>Email<input name="email" type="email" required autocomplete="email"></label>
+        </div>
+        <div class="row2">
+          <label>Start month<input name="start" type="month"></label>
+          <label>Length<select name="length"><option>1 month</option><option selected>3 months</option><option>6 months</option></select></label>
+        </div>
+        <label>Monthly budget<select name="budget"><option>Under $1,000</option><option selected>$1,000 – $2,500</option><option>$2,500 – $5,000</option><option>$5,000+</option></select></label>
+        <label>Anything else? (product, goals, logo files)<textarea name="notes"></textarea></label>
+        <button class="btn primary" type="submit">Send application</button>
+        <p class="sent" id="applySent">Your email app should open with the application filled in. Hit send there and I'll get back to you.</p>
+        <p class="formnote">Sending opens your own email app with everything filled in; nothing is stored on this site.</p>
+      </form>
+    </div>
   </div>
 </section>
 
@@ -272,6 +354,23 @@
   }), { threshold: 0.4 });
   document.querySelectorAll(".big[data-n]").forEach((el) => io.observe(el));
 })();
+</script>
+<script>
+  // wall application: builds an email to Luke from the form (the address is assembled here, not written in the HTML)
+  document.getElementById("applyForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const f = e.target, v = (n) => (f.elements[n].value || "").trim();
+    for (const n of ["brand", "name", "email"]) if (!v(n)) { f.elements[n].focus(); f.elements[n].reportValidity?.(); return; }
+    if (!f.elements.email.checkValidity()) { f.elements.email.reportValidity(); return; }
+    const pkg = f.querySelector("input[name=package]:checked").value;
+    const body = [
+      "Package: " + pkg, "Brand: " + v("brand"), "Website: " + (v("website") || "-"), "Contact: " + v("name") + " <" + v("email") + ">",
+      "Start: " + (v("start") || "flexible"), "Length: " + v("length"), "Monthly budget: " + v("budget"), "", v("notes"),
+    ].join("\n");
+    const to = ["ljvangro", "gmail.com"].join("@");
+    location.href = "mailto:" + to + "?subject=" + encodeURIComponent("Wall sponsorship application - " + v("brand")) + "&body=" + encodeURIComponent(body);
+    document.getElementById("applySent").style.display = "block";
+  });
 </script>
 </body>
 </html>
