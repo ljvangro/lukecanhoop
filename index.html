@@ -427,7 +427,7 @@
 // 28-day analytics: daily numbers from TikTok Studio and YouTube Studio (daily.json)
 (async () => {
   let D; try { D = await (await fetch("daily.json", { cache: "no-store" })).json(); } catch (e) { return; }
-  const SER = { tiktok: { name: "TikTok", c: "#FFD8B5" }, youtube: { name: "YouTube", c: "#FFB4AE" } };
+  const SER = { tiktok: { name: "TikTok", c: "#5EE6EB" }, youtube: { name: "YouTube", c: "#FF5A5F" } };
   const ONLY = { likes: "tiktok", watch_hours: "youtube" };   // metrics only one platform reports
   const days = [...new Set([...Object.keys(D.tiktok || {}), ...Object.keys(D.youtube || {})])].sort().slice(-28);
   if (!days.length) return;
