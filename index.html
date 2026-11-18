@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>LUKECANHOOP | Your Favorite NBA Casual</title>
-<meta name="description" content="LUKECANHOOP: NBA hot takes, rankings and comedy. 820K+ followers across TikTok and YouTube and 270M+ YouTube views.">
+<meta name="description" content="LUKECANHOOP: NBA hot takes, rankings and comedy. 765K+ followers across TikTok and YouTube and 265M+ YouTube views.">
 <meta property="og:title" content="LUKECANHOOP | Your Favorite NBA Casual">
-<meta property="og:description" content="NBA hot takes, rankings and comedy. 820K+ followers across TikTok and YouTube.">
+<meta property="og:description" content="NBA hot takes, rankings and comedy. 765K+ followers across TikTok and YouTube.">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -97,11 +97,20 @@
   .chip { transition: transform .15s, filter .15s; }
   .chip:hover { transform: translateY(-2px); filter: brightness(1.08); }
 
+  .ch.oct { --lt: var(--hoop-lt); }
+  .ch.oct h3 { color: var(--hoop-lt); }
+  .octbig strong { display: block; font-family: Anton, sans-serif; font-weight: 400; font-size: 64px; line-height: 1; color: var(--hoop-lt); }
+  .octbig span { color: var(--muted); font-size: 14px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+  .octrow { display: grid; gap: 10px; }
+  .octrow > div { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 18px; border-top: 1px solid var(--line); padding-top: 10px; }
+  .octrow b { width: 72px; color: var(--soft); font-size: 14px; }
+  .octrow span { color: var(--muted); font-size: 13px; }
+  .octrow span strong { color: var(--text); font-size: 20px; font-weight: 800; margin-right: 5px; }
   /* live stats */
   .livepill { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,.06); color: var(--soft); font-weight: 800; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 14px; border-radius: 999px; margin-bottom: 14px; }
   .livepill i { width: 9px; height: 9px; border-radius: 50%; background: #ef4444; box-shadow: 0 0 0 0 rgba(239,68,68,.7); animation: pulse 1.8s infinite; }
   @keyframes pulse { 70% { box-shadow: 0 0 0 10px rgba(239,68,68,0); } 100% { box-shadow: 0 0 0 0 rgba(239,68,68,0); } }
-  .grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .grid4 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
   @media (max-width: 960px) { .grid4 { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 520px) { .grid4 { grid-template-columns: 1fr; } }
   .tile { background: var(--card); border-radius: 18px; padding: 20px; border: 1px solid var(--line); transition: border-color .15s; }
@@ -204,7 +213,7 @@
 </header>
 
 <div class="stats">
-  <div class="stat"><div class="n" id="s-all">820K+</div><div class="l">Followers, all pages</div></div>
+  <div class="stat"><div class="n" id="s-all">765K+</div><div class="l">Total followers</div></div>
   <div class="stat"><div class="n" id="s-ytv">270M+</div><div class="l">YouTube views</div></div>
   <div class="stat"><div class="n" id="s-tt">568K</div><div class="l">TikTok followers</div></div>
   <div class="stat"><div class="n" id="s-yt">199K</div><div class="l">YouTube subscribers</div></div>
@@ -213,7 +222,7 @@
 <section id="channels">
   <div class="wrap">
     <h2 class="display">The channels</h2>
-    <p class="lead">Two pages, one guy. Basketball takes and football takes.</p>
+    <p class="lead">One page, one guy. NBA hot takes, rankings and comedy on TikTok and YouTube.</p>
     <div class="grid3">
       <article class="ch" style="--lt: var(--hoop-lt)">
         <h3>LUKECANHOOP</h3>
@@ -221,11 +230,14 @@
         <div class="nums"><div><strong>568K</strong>TikTok</div><div><strong>199K</strong>YouTube</div><div><strong>265M</strong>YT views</div></div>
         <div class="links"><a class="chip tt" href="https://www.tiktok.com/@lukecanhoop" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.5 3c.4 2.2 1.8 3.6 4 3.9v3a7.3 7.3 0 0 1-4-1.3v6.2a5.8 5.8 0 1 1-5.8-5.8c.3 0 .6 0 .9.1v3.1a2.8 2.8 0 1 0 1.9 2.6V3z" fill="#25F4EE" transform="translate(-1 -1)"/><path d="M16.5 3c.4 2.2 1.8 3.6 4 3.9v3a7.3 7.3 0 0 1-4-1.3v6.2a5.8 5.8 0 1 1-5.8-5.8c.3 0 .6 0 .9.1v3.1a2.8 2.8 0 1 0 1.9 2.6V3z" fill="#FE2C55" transform="translate(1 1)"/><path d="M16.5 3c.4 2.2 1.8 3.6 4 3.9v3a7.3 7.3 0 0 1-4-1.3v6.2a5.8 5.8 0 1 1-5.8-5.8c.3 0 .6 0 .9.1v3.1a2.8 2.8 0 1 0 1.9 2.6V3z" fill="#fff"/></svg>TikTok</a><a class="chip yt" href="https://www.youtube.com/@LUKECANHOOP" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="5" fill="#fff"/><path d="M11 5.5v9l8-4.5z" fill="#FF0000"/></svg>YouTube</a></div>
       </article>
-      <article class="ch" style="--lt: var(--third-lt)">
-        <h3>3RDANDLUKE</h3>
-        <p>Football takes and countdowns, same energy, different ball.</p>
-        <div class="nums"><div><strong>42.4K</strong>TikTok</div><div><strong>15K</strong>YouTube</div><div><strong>7.4M</strong>YT views</div></div>
-        <div class="links"><a class="chip tt" href="https://www.tiktok.com/@3rdandluke" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.5 3c.4 2.2 1.8 3.6 4 3.9v3a7.3 7.3 0 0 1-4-1.3v6.2a5.8 5.8 0 1 1-5.8-5.8c.3 0 .6 0 .9.1v3.1a2.8 2.8 0 1 0 1.9 2.6V3z" fill="#25F4EE" transform="translate(-1 -1)"/><path d="M16.5 3c.4 2.2 1.8 3.6 4 3.9v3a7.3 7.3 0 0 1-4-1.3v6.2a5.8 5.8 0 1 1-5.8-5.8c.3 0 .6 0 .9.1v3.1a2.8 2.8 0 1 0 1.9 2.6V3z" fill="#FE2C55" transform="translate(1 1)"/><path d="M16.5 3c.4 2.2 1.8 3.6 4 3.9v3a7.3 7.3 0 0 1-4-1.3v6.2a5.8 5.8 0 1 1-5.8-5.8c.3 0 .6 0 .9.1v3.1a2.8 2.8 0 1 0 1.9 2.6V3z" fill="#fff"/></svg>TikTok</a><a class="chip yt" href="https://www.youtube.com/@3rdandLuke" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="5" fill="#fff"/><path d="M11 5.5v9l8-4.5z" fill="#FF0000"/></svg>YouTube</a></div>
+      <article class="ch oct">
+        <h3>OCTOBER 2026</h3>
+        <p>Last month on LUKECANHOOP, straight from TikTok and YouTube analytics.</p>
+        <div class="octbig"><strong>10.3M</strong><span>total views</span></div>
+        <div class="octrow">
+          <div><b>TikTok</b><span><strong>4.5M</strong>views</span><span><strong>570K</strong>likes</span><span><strong>26.7K</strong>shares</span></div>
+          <div><b>YouTube</b><span><strong>5.77M</strong>views</span><span><strong>79.9K</strong>watch hours</span></div>
+        </div>
       </article>
     </div>
   </div>
@@ -310,7 +322,7 @@
 <footer>
   <div class="wrap">
     <span>© 2026 LUKECANHOOP</span>
-    <span><a href="https://www.tiktok.com/@lukecanhoop" target="_blank" rel="noopener">TikTok</a> · <a href="https://www.youtube.com/@LUKECANHOOP" target="_blank" rel="noopener">YouTube</a> · <a href="https://www.youtube.com/@3rdandLuke" target="_blank" rel="noopener">3RDANDLUKE</a></span>
+    <span><a href="https://www.tiktok.com/@lukecanhoop" target="_blank" rel="noopener">TikTok</a> · <a href="https://www.youtube.com/@LUKECANHOOP" target="_blank" rel="noopener">YouTube</a></span>
   </div>
 </footer>
 
@@ -321,8 +333,8 @@
 <script>
 (async () => {
   const fmt = (n) => n >= 1e6 ? (n / 1e6).toFixed(n >= 1e8 ? 0 : 1).replace(/\.0$/, "") + "M" : n >= 1e3 ? (n / 1e3).toFixed(n >= 1e5 ? 0 : 1).replace(/\.0$/, "") + "K" : String(n);
-  const color = { LUKECANHOOP: "var(--hoop-lt)", "3RDANDLUKE": "var(--third-lt)" };
-  const link = { "LUKECANHOOP tiktok": "https://www.tiktok.com/@lukecanhoop", "LUKECANHOOP youtube": "https://www.youtube.com/@LUKECANHOOP", "3RDANDLUKE tiktok": "https://www.tiktok.com/@3rdandluke", "3RDANDLUKE youtube": "https://www.youtube.com/@3rdandLuke" };
+  const color = { LUKECANHOOP: "var(--hoop-lt)" };
+  const link = { "LUKECANHOOP tiktok": "https://www.tiktok.com/@lukecanhoop", "LUKECANHOOP youtube": "https://www.youtube.com/@LUKECANHOOP" };
   let d;
   try { d = await (await fetch("stats.json", { cache: "no-store" })).json(); } catch (e) { return; } // keeps the numbers already in the page
   const P = d.pages, get = (a, p) => P.find((x) => x.account === a && x.platform === p);
