@@ -106,6 +106,42 @@
   .octrow b { width: 72px; color: var(--soft); font-size: 14px; }
   .octrow span { color: var(--muted); font-size: 13px; }
   .octrow span strong { color: var(--text); font-size: 20px; font-weight: 800; margin-right: 5px; }
+  /* 28-day analytics */
+  .an { margin-top: 18px; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 22px; }
+  .an[hidden] { display: none; }
+  .an-hd { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 16px; }
+  .an-hd h3 { font-family: Anton, sans-serif; font-weight: 400; font-size: 26px; letter-spacing: .5px; }
+  .an-hd small { display: block; color: var(--muted); font-size: 13px; font-family: Inter, sans-serif; letter-spacing: 0; }
+  .seg { display: inline-flex; background: rgba(255,255,255,.06); border-radius: 999px; padding: 3px; }
+  .seg button { all: unset; cursor: pointer; padding: 6px 14px; border-radius: 999px; font-weight: 700; font-size: 13px; color: var(--muted); }
+  .seg button.on { background: rgba(255,255,255,.14); color: var(--text); }
+  .an-tabs { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; margin-bottom: 18px; }
+  .an-tabs.three { grid-template-columns: repeat(3, 1fr); }
+  .an-tabs button { all: unset; cursor: pointer; padding: 12px 14px; border-right: 1px solid var(--line); border-top: 3px solid transparent; }
+  .an-tabs button:last-child { border-right: 0; }
+  .an-tabs button span { display: block; color: var(--muted); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .8px; }
+  .an-tabs button strong { display: block; font-family: Anton, sans-serif; font-weight: 400; font-size: 28px; line-height: 1.2; color: var(--text); font-variant-numeric: tabular-nums; }
+  .an-tabs button.on { background: rgba(255,255,255,.05); border-top-color: var(--soft); }
+  .an-tabs button[hidden] { display: none; }
+  .an-plot { position: relative; height: 240px; margin-right: 44px; touch-action: pan-y; cursor: crosshair; }
+  .an-grid { position: absolute; left: 0; right: -44px; height: 0; border-top: 1px dashed rgba(255,255,255,.09); }
+  .an-grid i { position: absolute; right: 0; top: -9px; font-style: normal; font-size: 11px; color: var(--muted); }
+  .an-grid.zero { border-top: 1px solid rgba(255,255,255,.25); }
+  .an-bars { position: absolute; inset: 0; display: flex; gap: 3px; }
+  .an-col { position: relative; flex: 1; }
+  .an-col b { position: absolute; left: 0; right: 0; border-radius: 3px; transition: height .35s, bottom .35s; }
+  .an-col.hl::before { content: ""; position: absolute; inset: 0 -1px; background: rgba(255,255,255,.06); border-radius: 4px; }
+  .an-x { position: relative; height: 20px; margin: 8px 44px 0 0; font-size: 11px; color: var(--muted); }
+  .an-x span { position: absolute; transform: translateX(-50%); white-space: nowrap; }
+  .an-tip { position: absolute; top: 0; pointer-events: none; background: #26262b; border: 1px solid rgba(255,255,255,.15); border-radius: 10px; padding: 10px 12px; font-size: 13px; min-width: 150px; box-shadow: 0 8px 24px rgba(0,0,0,.4); opacity: 0; transition: opacity .12s; z-index: 2; }
+  .an-tip.on { opacity: 1; }
+  .an-tip div { display: flex; justify-content: space-between; gap: 14px; }
+  .an-tip .d { color: var(--muted); font-weight: 700; margin-bottom: 4px; }
+  .an-tip .t { border-top: 1px solid var(--line); margin-top: 4px; padding-top: 4px; font-weight: 800; }
+  .an-tip u, .an-key u { text-decoration: none; display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+  .an-key { display: flex; gap: 16px; margin-top: 10px; font-size: 12px; color: var(--muted); }
+  @media (max-width: 640px) { .an { padding: 16px; } .an-tabs, .an-tabs.three { grid-template-columns: repeat(2, 1fr); } .an-tabs button { border-bottom: 1px solid var(--line); } .an-tabs button strong { font-size: 22px; } .an-plot { height: 200px; margin-right: 36px; } .an-grid { right: -36px; } .an-x { margin-right: 36px; } .an-bars { gap: 1px; } .an-col b { border-radius: 2px; } }
+
   /* live stats */
   .livepill { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,.06); color: var(--soft); font-weight: 800; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 14px; border-radius: 999px; margin-bottom: 14px; }
   .livepill i { width: 9px; height: 9px; border-radius: 50%; background: #ef4444; box-shadow: 0 0 0 0 rgba(239,68,68,.7); animation: pulse 1.8s infinite; }
@@ -235,7 +271,7 @@
         <p>Last month on LUKECANHOOP, straight from TikTok and YouTube analytics.</p>
         <div class="octbig"><strong>10.3M</strong><span>total views</span></div>
         <div class="octrow">
-          <div><b>TikTok</b><span><strong>4.5M</strong>views</span><span><strong>570K</strong>likes</span><span><strong>26.7K</strong>shares</span></div>
+          <div><b>TikTok</b><span><strong>4.5M</strong>views</span></div>
           <div><b>YouTube</b><span><strong>5.77M</strong>views</span><span><strong>79.9K</strong>watch hours</span></div>
         </div>
       </article>
@@ -247,8 +283,23 @@
   <div class="wrap">
     <div class="livepill"><i></i><span id="updated">Live stats</span></div>
     <h2 class="display">Live stats</h2>
-    <p class="lead">Pulled from the channel tracker every day.</p>
+    <p class="lead">Pulled from the channel tracker every day. Tap or hover the chart to see any single day.</p>
     <div class="grid4" id="tiles"></div>
+    <div class="an" id="an" hidden>
+      <div class="an-hd">
+        <h3>LAST 28 DAYS<small id="an-range"></small></h3>
+        <div class="seg" id="an-plat"><button data-p="all" class="on">All</button><button data-p="tiktok">TikTok</button><button data-p="youtube">YouTube</button></div>
+      </div>
+      <div class="an-tabs" id="an-tabs">
+        <button data-m="views" class="on"><span>Views</span><strong></strong></button>
+        <button data-m="followers"><span>New followers</span><strong></strong></button>
+        <button data-m="likes"><span>Likes</span><strong></strong></button>
+        <button data-m="watch_hours"><span>Watch hours</span><strong></strong></button>
+      </div>
+      <div class="an-plot" id="an-plot"><div class="an-bars" id="an-bars"></div><div class="an-tip" id="an-tip"></div></div>
+      <div class="an-x" id="an-x"></div>
+      <div class="an-key" id="an-key"></div>
+    </div>
   </div>
 </section>
 
@@ -370,6 +421,75 @@
     requestAnimationFrame(step);
   }), { threshold: 0.4 });
   document.querySelectorAll(".big[data-n]").forEach((el) => io.observe(el));
+})();
+</script>
+<script>
+// 28-day analytics: daily numbers from TikTok Studio and YouTube Studio (daily.json)
+(async () => {
+  let D; try { D = await (await fetch("daily.json", { cache: "no-store" })).json(); } catch (e) { return; }
+  const SER = { tiktok: { name: "TikTok", c: "#FFD8B5" }, youtube: { name: "YouTube", c: "#FFB4AE" } };
+  const ONLY = { likes: "tiktok", watch_hours: "youtube" };   // metrics only one platform reports
+  const days = [...new Set([...Object.keys(D.tiktok || {}), ...Object.keys(D.youtube || {})])].sort().slice(-28);
+  if (!days.length) return;
+  const fmt = (n) => { const a = Math.abs(n), s = n < 0 ? "-" : ""; return s + (a >= 1e6 ? (a / 1e6).toFixed(a >= 1e7 ? 1 : 2).replace(/\.?0+$/, "") + "M" : a >= 1e4 ? (a / 1e3).toFixed(a >= 1e5 ? 0 : 1).replace(/\.0$/, "") + "K" : Math.round(a).toLocaleString()); };
+  const dl = (d, o) => new Date(d + "T12:00").toLocaleDateString(undefined, o || { month: "short", day: "numeric" });
+  let plat = "all", met = "views";
+  const val = (p, d, m) => { const r = (D[p] || {})[d]; return r && r[m] != null ? r[m] : null; };
+  const plats = (m) => (ONLY[m] ? [ONLY[m]] : ["tiktok", "youtube"]).filter((p) => plat === "all" || p === plat);
+  const total = (m) => plats(m).reduce((t, p) => t + days.reduce((u, d) => u + (val(p, d, m) || 0), 0), 0);
+  const $ = (id) => document.getElementById(id);
+  $("an-range").textContent = dl(days[0]) + " – " + dl(days[days.length - 1], { month: "short", day: "numeric", year: "numeric" });
+  const nice = (x) => { const e = Math.pow(10, Math.floor(Math.log10(x || 1))), f = x / e; return (f <= 1 ? 1 : f <= 2 ? 2 : f <= 2.5 ? 2.5 : f <= 5 ? 5 : 10) * e; };
+  function draw() {
+    let shown = 0;
+    document.querySelectorAll("#an-tabs button").forEach((b) => {
+      const m = b.dataset.m; b.hidden = !!(plat !== "all" && ONLY[m] && ONLY[m] !== plat); if (!b.hidden) shown++;
+      b.classList.toggle("on", m === met);
+      b.querySelector("strong").textContent = fmt(total(m));
+      b.querySelector("span").textContent = { views: "Views", followers: "New followers", likes: "Likes" + (plat === "all" ? " · TikTok" : ""), watch_hours: "Watch hours" + (plat === "all" ? " · YouTube" : "") }[m];
+    });
+    $("an-tabs").classList.toggle("three", shown === 3);
+    const ps = plats(met);
+    let hi = 0, lo = 0;
+    days.forEach((d) => { let pos = 0, neg = 0; ps.forEach((p) => { const v = val(p, d, met) || 0; v > 0 ? (pos += v) : (neg += v); }); hi = Math.max(hi, pos); lo = Math.min(lo, neg); });
+    const step = nice((hi - lo) / 4), top = Math.ceil(hi / step) * step || step, bot = Math.floor(lo / step) * step, R = top - bot, y = (v) => ((v - bot) / R) * 100;
+    let g = ""; for (let v = bot; v <= top + step / 2; v += step) g += `<div class="an-grid${Math.abs(v) < step / 2 && bot < 0 ? " zero" : ""}" style="bottom:${y(v)}%"><i>${fmt(Math.round(v * 10) / 10)}</i></div>`;
+    $("an-plot").querySelectorAll(".an-grid").forEach((e) => e.remove());
+    $("an-plot").insertAdjacentHTML("afterbegin", g);
+    $("an-bars").innerHTML = days.map((d, i) => {
+      let pa = 0, na = 0;
+      const segs = ps.map((p) => { const v = val(p, d, met) || 0, h = (Math.abs(v) / R) * 100, b = v >= 0 ? y(pa) : y(na + v); v >= 0 ? (pa += v) : (na += v); return h ? `<b style="background:${SER[p].c};bottom:${b}%;height:${Math.max(h, 0.6)}%"></b>` : ""; }).join("");
+      return `<div class="an-col">${segs}</div>`;
+    }).join("");
+    const last = days.length - 1;
+    $("an-x").innerHTML = days.map((d, i) => (i === last || (i % 7 === 0 && last - i >= 4)) ? `<span style="left:${((i + 0.5) / days.length) * 100}%">${dl(d)}</span>` : "").join("");
+    $("an-key").innerHTML = ps.map((p) => `<span><u style="background:${SER[p].c}"></u>${SER[p].name}</span>`).join("");
+  }
+  function tip(i) {
+    const t = $("an-tip");
+    [...$("an-bars").children].forEach((c, k) => c.classList.toggle("hl", k === i));
+    if (i == null) { t.classList.remove("on"); return; }
+    const d = days[i], ps = plats(met), unit = { views: "views", followers: "new followers", likes: "likes", watch_hours: "watch hours" }[met];
+    const show = (v) => v == null ? "–" : (met === "followers" && v > 0 ? "+" : "") + v.toLocaleString();
+    const rows = ps.map((p) => `<div><span><u style="background:${SER[p].c}"></u>${SER[p].name}</span><b>${show(val(p, d, met))}</b></div>`).join("");
+    const sum = Math.round(ps.reduce((a, p) => a + (val(p, d, met) || 0), 0) * 10) / 10;
+    t.innerHTML = `<div class="d">${dl(d, { weekday: "short", month: "short", day: "numeric" })}</div>${rows}${ps.length > 1 ? `<div class="t"><span>Total</span><b>${show(sum)}</b></div>` : ""}<div style="color:var(--muted);font-size:11px;margin-top:2px">${unit}</div>`;
+    t.classList.add("on");
+    const W = $("an-plot").clientWidth, x = ((i + 0.5) / days.length) * W, tw = t.offsetWidth;
+    t.style.left = Math.min(W - tw, Math.max(0, x < W / 2 ? x + 14 : x - tw - 14)) + "px";
+  }
+  const pick = (e) => { const r = $("an-plot").getBoundingClientRect(); return Math.min(days.length - 1, Math.max(0, Math.floor(((e.clientX - r.left) / r.width) * days.length))); };
+  $("an-plot").addEventListener("pointermove", (e) => tip(pick(e)));
+  $("an-plot").addEventListener("pointerdown", (e) => tip(pick(e)));
+  $("an-plot").addEventListener("pointerleave", (e) => { if (e.pointerType === "mouse") tip(null); });
+  $("an-tabs").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; met = b.dataset.m; draw(); tip(null); });
+  $("an-plat").addEventListener("click", (e) => {
+    const b = e.target.closest("button"); if (!b) return; plat = b.dataset.p;
+    $("an-plat").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b));
+    if (ONLY[met] && plat !== "all" && ONLY[met] !== plat) met = "views";
+    draw(); tip(null);
+  });
+  $("an").hidden = false; draw();
 })();
 </script>
 <script>
