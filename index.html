@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>LUKECANHOOP | Your Favorite NBA Casual</title>
-<meta name="description" content="LUKECANHOOP: NBA hot takes, rankings and comedy. 765K+ followers across TikTok and YouTube and 265M+ YouTube views.">
+<meta name="description" content="LUKECANHOOP: NBA hot takes, rankings and comedy. 770K+ followers across TikTok and YouTube and 269M+ YouTube views.">
 <meta property="og:title" content="LUKECANHOOP | Your Favorite NBA Casual">
-<meta property="og:description" content="NBA hot takes, rankings and comedy. 765K+ followers across TikTok and YouTube.">
+<meta property="og:description" content="NBA hot takes, rankings and comedy. 770K+ followers across TikTok and YouTube.">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -249,10 +249,10 @@
 </header>
 
 <div class="stats">
-  <div class="stat"><div class="n" id="s-all">765K+</div><div class="l">Total followers</div></div>
-  <div class="stat"><div class="n" id="s-ytv">270M+</div><div class="l">YouTube views</div></div>
-  <div class="stat"><div class="n" id="s-tt">568K</div><div class="l">TikTok followers</div></div>
-  <div class="stat"><div class="n" id="s-yt">199K</div><div class="l">YouTube subscribers</div></div>
+  <div class="stat"><div class="n" id="s-all">770K+</div><div class="l">Total followers</div></div>
+  <div class="stat"><div class="n" id="s-ytv">269M+</div><div class="l">YouTube views</div></div>
+  <div class="stat"><div class="n" id="s-tt">570K</div><div class="l">TikTok followers</div></div>
+  <div class="stat"><div class="n" id="s-yt">201K</div><div class="l">YouTube subscribers</div></div>
 </div>
 
 <section id="channels">
@@ -263,7 +263,7 @@
       <article class="ch" style="--lt: var(--hoop-lt)">
         <h3>LUKECANHOOP</h3>
         <p>NBA rankings, hot takes and "did I miss any?" countdowns. The main page.</p>
-        <div class="nums"><div><strong>568K</strong>TikTok</div><div><strong>199K</strong>YouTube</div><div><strong>265M</strong>YT views</div></div>
+        <div class="nums"><div><strong id="c-tt">570K</strong>TikTok</div><div><strong id="c-yt">201K</strong>YouTube</div><div><strong id="c-ytv">269M</strong>YT views</div></div>
         <div class="links"><a class="chip tt" href="https://www.tiktok.com/@lukecanhoop" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.5 3c.4 2.2 1.8 3.6 4 3.9v3a7.3 7.3 0 0 1-4-1.3v6.2a5.8 5.8 0 1 1-5.8-5.8c.3 0 .6 0 .9.1v3.1a2.8 2.8 0 1 0 1.9 2.6V3z" fill="#25F4EE" transform="translate(-1 -1)"/><path d="M16.5 3c.4 2.2 1.8 3.6 4 3.9v3a7.3 7.3 0 0 1-4-1.3v6.2a5.8 5.8 0 1 1-5.8-5.8c.3 0 .6 0 .9.1v3.1a2.8 2.8 0 1 0 1.9 2.6V3z" fill="#FE2C55" transform="translate(1 1)"/><path d="M16.5 3c.4 2.2 1.8 3.6 4 3.9v3a7.3 7.3 0 0 1-4-1.3v6.2a5.8 5.8 0 1 1-5.8-5.8c.3 0 .6 0 .9.1v3.1a2.8 2.8 0 1 0 1.9 2.6V3z" fill="#fff"/></svg>TikTok</a><a class="chip yt" href="https://www.youtube.com/@LUKECANHOOP" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="5" fill="#fff"/><path d="M11 5.5v9l8-4.5z" fill="#FF0000"/></svg>YouTube</a></div>
       </article>
       <article class="ch oct">
@@ -365,7 +365,7 @@
     <aside class="aud">
       <h3>Reach by page</h3>
       <div id="reach"></div>
-      <p style="color:var(--muted);font-size:13px;margin-top:16px"><span id="likes">56.4M TikTok likes on LUKECANHOOP.</span></p>
+      <p style="color:var(--muted);font-size:13px;margin-top:16px"><span id="likes">56.8M TikTok likes on LUKECANHOOP.</span></p>
     </aside>
   </div>
 </section>
@@ -394,6 +394,7 @@
   const set = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
   set("s-all", fmt(Math.floor(sum / 5e3) * 5e3) + "+"); set("s-ytv", fmt(Math.floor(ytv / 1e6) * 1e6) + "+");
   set("s-tt", fmt(get("LUKECANHOOP", "tiktok").followers)); set("s-yt", fmt(get("LUKECANHOOP", "youtube").followers));
+  set("c-tt", fmt(get("LUKECANHOOP", "tiktok").followers)); set("c-yt", fmt(get("LUKECANHOOP", "youtube").followers)); set("c-ytv", fmt(Math.floor(ytv / 1e6) * 1e6));
   set("likes", fmt(get("LUKECANHOOP", "tiktok").total) + " TikTok likes on LUKECANHOOP. Updated " + new Date(d.updated + "T12:00").toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" }) + ".");
   set("updated", "Live · updated " + new Date(d.updated + "T12:00").toLocaleDateString(undefined, { month: "short", day: "numeric" }));
   const spark = (pts) => {
