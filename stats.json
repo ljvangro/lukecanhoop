@@ -4,16 +4,12 @@
   {
    "account": "LUKECANHOOP",
    "platform": "tiktok",
-   "followers": 569400,
-   "total": 56700000,
+   "followers": 569600,
+   "total": 56800000,
    "posts": null,
-   "gain30": 2900,
+   "gain30": 3200,
    "days": 30,
    "spark": [
-    [
-     "2026-10-22",
-     566400
-    ],
     [
      "2026-10-23",
      566500
@@ -129,16 +125,20 @@
     [
      "2026-11-23",
      569400
+    ],
+    [
+     "2026-11-24",
+     569600
     ]
    ]
   },
   {
    "account": "LUKECANHOOP",
    "platform": "youtube",
-   "followers": 200000,
-   "total": 269140547,
-   "posts": 500,
-   "gain30": 3000,
+   "followers": 201000,
+   "total": 269473107,
+   "posts": 502,
+   "gain30": 4000,
    "days": 30,
    "spark": [
     [
@@ -259,7 +259,7 @@
     ],
     [
      "2026-11-24",
-     200000
+     201000
     ]
    ]
   }
